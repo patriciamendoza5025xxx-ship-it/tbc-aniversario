@@ -1,0 +1,1950 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>TBC #239 El Calvario - 10 Aniversario</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#fffdf7;
+    color:#17372b;
+    overflow-x:hidden;
+}
+
+/* =========================
+   BARRA DE NAVEGACIÓN
+========================= */
+
+nav{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1000;
+
+    background:rgba(3,61,42,0.96);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:22px;
+
+    padding:9px 15px;
+
+    box-shadow:0 4px 20px rgba(0,0,0,.25);
+}
+
+nav img{
+    width:52px;
+    height:52px;
+    object-fit:contain;
+    background:white;
+    border-radius:10px;
+    padding:3px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    font-size:14px;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#f7df99;
+    transform:translateY(-3px);
+}
+
+/* =========================
+   PORTADA
+========================= */
+
+.hero{
+    min-height:100vh;
+
+    display:flex;
+    align-items:center;
+
+    padding:130px 8% 80px;
+
+    position:relative;
+    overflow:hidden;
+
+    color:white;
+
+    background:
+    linear-gradient(
+        120deg,
+        rgba(3,61,42,.98),
+        rgba(8,116,71,.82)
+    ),
+    url("IMAGENTBC/tbc%20239%20actualmente.jfif")
+    center/cover no-repeat;
+}
+
+.hero-contenido{
+    max-width:1000px;
+    position:relative;
+    z-index:5;
+}
+
+.logo-principal{
+    width:140px;
+
+    background:white;
+    padding:7px;
+
+    border-radius:18px;
+
+    box-shadow:0 12px 35px rgba(0,0,0,.35);
+
+    animation:flotar 4s infinite ease-in-out;
+}
+
+.badge{
+    display:inline-block;
+
+    margin:20px 0;
+
+    padding:8px 18px;
+
+    border:1px solid #f7df99;
+    border-radius:50px;
+
+    color:#f7df99;
+
+    font-weight:bold;
+    letter-spacing:2px;
+
+    animation:pulso 2.5s infinite;
+}
+
+.hero h1{
+    font-size:clamp(2.5rem,6vw,6rem);
+    line-height:1;
+}
+
+.hero h1 span{
+    color:#f7df99;
+}
+
+.numero10{
+    display:block;
+
+    font-size:clamp(6rem,15vw,11rem);
+
+    line-height:.75;
+
+    color:#f7df99;
+
+    text-shadow:
+    0 0 15px rgba(247,223,153,.5),
+    0 0 40px rgba(247,223,153,.4);
+
+    animation:brillo 2.5s infinite;
+}
+
+.hero p{
+    max-width:800px;
+
+    margin-top:25px;
+
+    font-size:1.1rem;
+}
+
+.boton{
+    display:inline-block;
+
+    margin-top:25px;
+
+    padding:14px 25px;
+
+    border-radius:50px;
+
+    background:linear-gradient(
+        135deg,
+        #7040a8,
+        #a978d0
+    );
+
+    color:white;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.3);
+
+    transition:.3s;
+}
+
+.boton:hover{
+    transform:translateY(-5px) scale(1.03);
+}
+
+/* =========================
+   DESTELLOS
+========================= */
+
+.destellos{
+    position:absolute;
+    inset:0;
+    pointer-events:none;
+}
+
+.destellos span{
+    position:absolute;
+
+    width:7px;
+    height:7px;
+
+    background:#f7df99;
+
+    transform:rotate(45deg);
+
+    box-shadow:0 0 20px #f7df99;
+
+    animation:destello 2s infinite;
+}
+
+.destellos span:nth-child(1){
+    left:10%;
+    top:20%;
+}
+
+.destellos span:nth-child(2){
+    left:30%;
+    top:15%;
+    animation-delay:.5s;
+}
+
+.destellos span:nth-child(3){
+    left:70%;
+    top:25%;
+    animation-delay:1s;
+}
+
+.destellos span:nth-child(4){
+    left:85%;
+    top:65%;
+    animation-delay:1.5s;
+}
+
+.destellos span:nth-child(5){
+    left:25%;
+    top:80%;
+    animation-delay:.8s;
+}
+
+.destellos span:nth-child(6){
+    left:60%;
+    top:85%;
+    animation-delay:1.2s;
+}
+
+/* =========================
+   SECCIONES
+========================= */
+
+section{
+    max-width:1250px;
+    margin:auto;
+    padding:90px 7%;
+}
+
+.titulo{
+    text-align:center;
+    margin-bottom:45px;
+}
+
+.titulo small{
+    color:#7040a8;
+    font-weight:bold;
+    letter-spacing:3px;
+    text-transform:uppercase;
+}
+
+.titulo h2{
+    color:#033d2a;
+    font-size:clamp(2rem,5vw,3.8rem);
+    margin:10px 0;
+}
+
+.titulo h2::after{
+    content:"";
+
+    display:block;
+
+    width:80px;
+    height:4px;
+
+    margin:12px auto;
+
+    border-radius:10px;
+
+    background:
+    linear-gradient(
+        90deg,
+        #087447,
+        #7040a8,
+        #d5aa43
+    );
+
+    animation:expandir 2s infinite alternate;
+}
+
+.titulo p{
+    max-width:850px;
+    margin:auto;
+    color:#60756b;
+}
+
+/* =========================
+   ANIVERSARIO
+========================= */
+
+.aniversario{
+    max-width:none;
+
+    text-align:center;
+
+    color:white;
+
+    background:
+    linear-gradient(
+        135deg,
+        #033d2a,
+        #087447,
+        #7040a8
+    );
+
+    position:relative;
+    overflow:hidden;
+}
+
+.aniversario h2{
+    font-size:clamp(4rem,10vw,8rem);
+
+    color:#f7df99;
+
+    animation:brillo 2s infinite;
+}
+
+.aniversario strong{
+    font-size:1.4rem;
+}
+
+/* =========================
+   TARJETAS
+========================= */
+
+.contenedor{
+    display:grid;
+
+    grid-template-columns:
+    repeat(2,1fr);
+
+    gap:30px;
+}
+
+.tarjeta{
+    background:white;
+
+    border-radius:25px;
+
+    padding:30px;
+
+    box-shadow:
+    0 15px 40px rgba(0,0,0,.1);
+
+    border-top:6px solid #087447;
+
+    transition:.4s;
+}
+
+.tarjeta:hover{
+    transform:translateY(-8px);
+}
+
+.tarjeta.morada{
+    border-top-color:#7040a8;
+}
+
+.tarjeta h3{
+    color:#087447;
+    font-size:1.6rem;
+    margin-bottom:12px;
+}
+
+.tarjeta.morada h3{
+    color:#7040a8;
+}
+
+.tarjeta img{
+    width:100%;
+    height:330px;
+
+    object-fit:cover;
+
+    border-radius:18px;
+
+    cursor:pointer;
+
+    transition:.5s;
+}
+
+.tarjeta img:hover{
+    transform:scale(1.03);
+}
+
+/* =========================
+   LÍNEA DEL TIEMPO
+========================= */
+
+.timeline{
+    position:relative;
+    max-width:1100px;
+    margin:auto;
+}
+
+.timeline::before{
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+    top:0;
+    bottom:0;
+
+    width:4px;
+
+    transform:translateX(-50%);
+
+    background:
+    linear-gradient(
+        #087447,
+        #d5aa43,
+        #7040a8,
+        #087447
+    );
+}
+
+.evento{
+    width:50%;
+
+    padding:20px 50px;
+
+    position:relative;
+}
+
+.evento:nth-child(even){
+    margin-left:50%;
+}
+
+.punto{
+    position:absolute;
+
+    top:35px;
+
+    width:25px;
+    height:25px;
+
+    background:white;
+
+    border:6px solid #7040a8;
+
+    border-radius:50%;
+
+    box-shadow:
+    0 0 0 7px rgba(112,64,168,.15);
+}
+
+.evento:nth-child(odd) .punto{
+    right:-12px;
+}
+
+.evento:nth-child(even) .punto{
+    left:-12px;
+}
+
+.evento-contenido{
+    background:white;
+
+    padding:25px;
+
+    border-radius:25px;
+
+    box-shadow:
+    0 15px 40px rgba(0,0,0,.1);
+
+    border:1px solid #eadfbf;
+
+    transition:.4s;
+}
+
+.evento-contenido:hover{
+    transform:translateY(-7px);
+}
+
+.evento:nth-child(odd){
+    text-align:right;
+}
+
+.evento:nth-child(even){
+    text-align:left;
+}
+
+.año{
+    display:inline-block;
+
+    padding:5px 15px;
+
+    border-radius:30px;
+
+    background:#087447;
+
+    color:white;
+
+    font-weight:bold;
+}
+
+.evento h3{
+    color:#087447;
+
+    margin:10px 0;
+
+    font-size:1.5rem;
+}
+
+.evento img{
+    width:100%;
+    height:230px;
+
+    object-fit:cover;
+
+    border-radius:17px;
+
+    margin-top:15px;
+
+    cursor:pointer;
+
+    transition:.5s;
+}
+
+.evento img:hover{
+    transform:scale(1.03);
+}
+
+.frase{
+    color:#75571c;
+    font-style:italic;
+    font-weight:bold;
+    margin-top:10px;
+}
+
+/* =========================
+   GALERÍA
+========================= */
+
+.galeria{
+    display:grid;
+
+    grid-template-columns:
+    repeat(4,1fr);
+
+    grid-auto-rows:190px;
+
+    gap:15px;
+}
+
+.galeria figure{
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:20px;
+
+    cursor:pointer;
+
+    background:#ddd;
+}
+
+.galeria figure:nth-child(5n+1){
+    grid-column:span 2;
+    grid-row:span 2;
+}
+
+.galeria img{
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    transition:.6s;
+}
+
+.galeria figure:hover img{
+    transform:scale(1.12);
+}
+
+.galeria figure::after{
+    content:"＋";
+
+    position:absolute;
+
+    top:10px;
+    right:10px;
+
+    width:38px;
+    height:38px;
+
+    display:grid;
+    place-items:center;
+
+    border-radius:50%;
+
+    background:rgba(112,64,168,.9);
+
+    color:white;
+
+    font-size:25px;
+
+    opacity:0;
+
+    transition:.3s;
+}
+
+.galeria figure:hover::after{
+    opacity:1;
+}
+
+/* =========================
+   FRASE FINAL DE GALERÍA
+========================= */
+
+.frase-final{
+    text-align:center;
+
+    padding:80px 7%;
+
+    background:
+    linear-gradient(
+        135deg,
+        #f4edf8,
+        #fffdf7
+    );
+}
+
+.frase-final div{
+    max-width:1000px;
+
+    margin:auto;
+
+    padding:40px;
+
+    background:white;
+
+    border-left:7px solid #7040a8;
+
+    border-radius:25px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.1);
+}
+
+.frase-final p{
+    font-size:clamp(1.4rem,3vw,2.2rem);
+
+    color:#033d2a;
+
+    font-weight:bold;
+}
+
+/* =========================
+   CIERRE
+========================= */
+
+.final{
+    max-width:none;
+
+    text-align:center;
+
+    color:white;
+
+    padding:110px 7%;
+
+    background:
+    linear-gradient(
+        135deg,
+        #033d2a,
+        #7040a8,
+        #087447
+    );
+}
+
+.final10{
+    font-size:clamp(6rem,18vw,13rem);
+
+    color:#f7df99;
+
+    font-weight:bold;
+
+    line-height:.7;
+
+    animation:pulso 2s infinite;
+}
+
+.final h2{
+    font-size:clamp(2rem,5vw,4.5rem);
+
+    margin:30px 0;
+}
+
+.contacto{
+    max-width:650px;
+
+    margin:35px auto 0;
+
+    padding:30px;
+
+    border-radius:25px;
+
+    background:rgba(255,255,255,.1);
+
+    border:1px solid rgba(255,255,255,.3);
+}
+
+.contacto strong{
+    display:block;
+
+    color:#f7df99;
+
+    font-size:1.4rem;
+
+    margin:10px;
+}
+
+.contacto a{
+    color:white;
+
+    font-weight:bold;
+
+    text-decoration:none;
+}
+
+.contacto a:hover{
+    color:#f7df99;
+}
+
+/* =========================
+   PIE
+========================= */
+
+footer{
+    background:#022d1f;
+
+    color:white;
+
+    padding:30px 7%;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+}
+
+footer img{
+    width:60px;
+
+    background:white;
+
+    padding:3px;
+
+    border-radius:8px;
+}
+
+/* =========================
+   VENTANA PARA AMPLIAR FOTO
+========================= */
+
+.lightbox{
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.9);
+
+    z-index:2000;
+
+    display:none;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:25px;
+}
+
+.lightbox.activo{
+    display:flex;
+}
+
+.lightbox img{
+    max-width:95vw;
+    max-height:88vh;
+
+    object-fit:contain;
+
+    border-radius:15px;
+
+    box-shadow:0 0 50px black;
+
+    animation:zoom .3s;
+}
+
+.cerrar{
+    position:absolute;
+
+    top:20px;
+    right:25px;
+
+    width:50px;
+    height:50px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#7040a8;
+
+    color:white;
+
+    font-size:30px;
+
+    cursor:pointer;
+}
+
+/* =========================
+   ANIMACIONES
+========================= */
+
+@keyframes flotar{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-10px);
+    }
+
+}
+
+@keyframes pulso{
+
+    0%,100%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.05);
+    }
+
+}
+
+@keyframes brillo{
+
+    0%,100%{
+        text-shadow:0 0 0 transparent;
+    }
+
+    50%{
+        text-shadow:
+        0 0 25px #f7df99,
+        0 0 50px rgba(247,223,153,.5);
+    }
+
+}
+
+@keyframes destello{
+
+    0%,100%{
+        opacity:.2;
+        transform:scale(.5) rotate(45deg);
+    }
+
+    50%{
+        opacity:1;
+        transform:scale(1.8) rotate(45deg);
+    }
+
+}
+
+@keyframes expandir{
+
+    from{
+        width:40px;
+    }
+
+    to{
+        width:120px;
+    }
+
+}
+
+@keyframes zoom{
+
+    from{
+        transform:scale(.8);
+    }
+
+    to{
+        transform:scale(1);
+    }
+
+}
+
+/* =========================
+   CELULAR
+========================= */
+
+@media(max-width:900px){
+
+    nav{
+        justify-content:flex-start;
+        overflow-x:auto;
+    }
+
+    .contenedor{
+        grid-template-columns:1fr;
+    }
+
+    .timeline::before{
+        left:12px;
+    }
+
+    .evento,
+    .evento:nth-child(even){
+
+        width:100%;
+
+        margin-left:0;
+
+        text-align:left;
+
+        padding-left:42px;
+        padding-right:0;
+    }
+
+    .evento:nth-child(odd) .punto,
+    .evento:nth-child(even) .punto{
+
+        left:0;
+        right:auto;
+
+    }
+
+    .galeria{
+
+        grid-template-columns:
+        repeat(2,1fr);
+
+        grid-auto-rows:160px;
+
+    }
+
+    .galeria figure:nth-child(5n+1){
+
+        grid-column:span 1;
+        grid-row:span 1;
+
+    }
+
+}
+
+@media(max-width:520px){
+
+    nav a{
+        font-size:11px;
+    }
+
+    .galeria{
+        grid-template-columns:1fr;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+<!-- =========================
+     MENÚ
+========================= -->
+
+<nav>
+
+<img src="IMAGENTBC/logo.jfif">
+
+<a href="#inicio">Inicio</a>
+
+<a href="#aniversario">10 años</a>
+
+<a href="#historia">Historia</a>
+
+<a href="#evolucion">Evolución</a>
+
+<a href="#galeria">Galería</a>
+
+<a href="#contacto">Contacto</a>
+
+</nav>
+
+
+<!-- =========================
+     PORTADA
+========================= -->
+
+<header class="hero" id="inicio">
+
+<div class="destellos">
+
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+
+</div>
+
+<div class="hero-contenido">
+
+<img
+class="logo-principal"
+src="IMAGENTBC/logo.jfif"
+alt="Logo Telebachillerato Comunitario"
+>
+
+<div class="badge">
+
+✦ 2016 — 2026 · DÉCIMO ANIVERSARIO ✦
+
+</div>
+
+<h1>
+
+TBC #239
+
+<br>
+
+<span>EL CALVARIO</span>
+
+<br>
+
+<span class="numero10">10</span>
+
+AÑOS DE HISTORIA
+
+</h1>
+
+<p>
+
+<strong>¡Está de aniversario!</strong>
+
+Celebramos diez años de aprendizajes,
+generaciones, esfuerzo, recuerdos y crecimiento
+de nuestra comunidad educativa.
+
+</p>
+
+<a class="boton" href="#historia">
+
+✨ CONOCE NUESTRA HISTORIA
+
+</a>
+
+</div>
+
+</header>
+
+
+<!-- =========================
+     ANIVERSARIO
+========================= -->
+
+<section class="aniversario" id="aniversario">
+
+<h2>10 AÑOS</h2>
+
+<strong>
+
+🎉 TBC #239 EL CALVARIO 🎉
+
+<br>
+
+2016 — 2026 · CELEBRANDO NUESTRO ANIVERSARIO
+
+</strong>
+
+<p style="max-width:800px;margin:20px auto;">
+
+Diez años no son solamente una fecha:
+
+son generaciones, maestros,
+estudiantes, actividades, recuerdos
+y una historia que seguimos construyendo.
+
+</p>
+
+</section>
+
+
+<!-- =========================
+     QUÉ ES EL TBC
+========================= -->
+
+<section>
+
+<div class="titulo">
+
+<small>Conoce nuestra institución</small>
+
+<h2>
+¿Qué es el Telebachillerato Comunitario?
+</h2>
+
+<p>
+
+El Telebachillerato Comunitario es una opción
+de Educación Media Superior que permite a jóvenes
+de comunidades continuar sus estudios de bachillerato
+y fortalecer su desarrollo educativo.
+
+</p>
+
+</div>
+
+
+<div class="contenedor">
+
+
+<div class="tarjeta">
+
+<h3>
+Una oportunidad para nuestra comunidad
+</h3>
+
+<p>
+
+Los Telebachilleratos Comunitarios buscan acercar
+la Educación Media Superior a comunidades que cuentan
+con pocas alternativas educativas cercanas.
+
+También representan un espacio de aprendizaje,
+convivencia y crecimiento.
+
+</p>
+
+<br>
+
+<p>
+
+En nuestro caso, el TBC #239 El Calvario ha acompañado
+durante diez años a diferentes generaciones,
+construyendo una historia propia que hoy celebramos.
+
+</p>
+
+</div>
+
+
+<div class="tarjeta morada">
+
+<h3>
+Una historia que merece celebrarse
+</h3>
+
+<img
+src="IMAGENTBC/actividad%20tbc.jfif"
+alt="Actividad del TBC #239"
+>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     HISTORIA
+========================= -->
+
+<section id="historia">
+
+<div class="titulo">
+
+<small>2016 — 2026</small>
+
+<h2>
+La historia del TBC #239 El Calvario
+</h2>
+
+<p>
+
+Desde nuestros primeros espacios prestados
+hasta las instalaciones que hoy seguimos mejorando,
+cada etapa forma parte de nuestros diez años.
+
+</p>
+
+</div>
+
+
+<div class="timeline">
+
+
+<!-- 2016 -->
+
+<div class="evento">
+
+<span class="punto"></span>
+
+<div class="evento-contenido">
+
+<span class="año">
+2016
+</span>
+
+<h3>
+🌱 El comienzo
+</h3>
+
+<p>
+
+El TBC #239 El Calvario inició sus clases
+en una comisaría comunitaria y en cuartos
+de una casa que fueron prestados para
+poder llevar a cabo las actividades escolares.
+
+</p>
+
+<img
+src="IMAGENTBC/inicios%20del%20tb.jfif"
+alt="Inicios del TBC"
+>
+
+<p class="frase">
+
+Un comienzo sencillo,
+pero lleno de ganas de salir adelante.
+
+</p>
+
+</div>
+
+</div>
+
+
+<!-- 2016-2023 -->
+
+<div class="evento">
+
+<span class="punto"></span>
+
+<div class="evento-contenido">
+
+<span class="año">
+2016 — 2023
+</span>
+
+<h3>
+📚 Creciendo en espacios prestados
+</h3>
+
+<p>
+
+Durante estos años estuvimos en espacios prestados,
+sacando generaciones adelante con el trabajo
+de maestros y estudiantes.
+
+Aunque los lugares eran sencillos,
+se cuidaban y se aprovechaban con responsabilidad.
+
+</p>
+
+<img
+src="IMAGENTBC/espacios%20prestados.jfif"
+alt="Espacios prestados"
+>
+
+<p class="frase">
+
+Con lo que teníamos,
+hicimos lo mejor que pudimos.
+
+</p>
+
+</div>
+
+</div>
+
+
+<!-- DECORACIONES -->
+
+<div class="evento">
+
+<span class="punto"></span>
+
+<div class="evento-contenido">
+
+<span class="año">
+2016 — 2023
+</span>
+
+<h3>
+🎄💀❤️ Hicimos comunidad
+</h3>
+
+<p>
+
+Los espacios prestados también se llenaron
+de vida.
+
+En fechas importantes como Navidad,
+Día de Muertos y San Valentín,
+maestros y estudiantes decoraban los lugares
+para celebrar y convivir.
+
+</p>
+
+<img
+src="IMAGENTBC/decoracion%20tbc.jfif"
+alt="Decoración del TBC"
+>
+
+<p class="frase">
+
+No eran grandes instalaciones,
+pero ahí se quedaron grandes recuerdos.
+
+</p>
+
+</div>
+
+</div>
+
+
+<!-- 2024 -->
+
+<div class="evento">
+
+<span class="punto"></span>
+
+<div class="evento-contenido">
+
+<span class="año">
+2024
+</span>
+
+<h3>
+🏗️ Comienza la construcción
+</h3>
+
+<p>
+
+En 2024 comenzó la construcción
+de las instalaciones del TBC #239.
+
+Fue el inicio de una nueva etapa
+para nuestra institución.
+
+</p>
+
+<img
+src="IMAGENTBC/comienza%20la%20construccion%20tbc.jfif"
+alt="Construcción del TBC"
+>
+
+<p class="frase">
+
+Un sueño comenzó a tomar forma.
+
+</p>
+
+</div>
+
+</div>
+
+
+<!-- 2025 -->
+
+<div class="evento">
+
+<span class="punto"></span>
+
+<div class="evento-contenido">
+
+<span class="año">
+2025
+</span>
+
+<h3>
+🏫 Llegamos a nuestras instalaciones
+</h3>
+
+<p>
+
+En 2025 comenzaron a ocuparse
+las nuevas instalaciones.
+
+Después de tantos años en espacios prestados,
+tener este lugar significó un paso
+muy importante.
+
+</p>
+
+<img
+src="IMAGENTBC/llegamos%20a%20nuestras%20instalaciones.jfif"
+alt="Nuestras instalaciones"
+>
+
+<p class="frase">
+
+Una nueva etapa comenzó gracias
+al esfuerzo de la comunidad.
+
+</p>
+
+</div>
+
+</div>
+
+
+<!-- 2025-2026 -->
+
+<div class="evento">
+
+<span class="punto"></span>
+
+<div class="evento-contenido">
+
+<span class="año">
+2025 — 2026
+</span>
+
+<h3>
+🌳 Seguimos creciendo
+</h3>
+
+<p>
+
+Poco a poco el plantel continúa mejorando.
+
+Se ha trabajado en el cercado,
+se han plantado árboles y se han realizado
+diferentes mejoras para hacer cada vez
+más bonito y agradable nuestro espacio.
+
+</p>
+
+<img
+src="IMAGENTBC/seguimos%20creciendo%20tbc.jfif"
+alt="Seguimos creciendo"
+>
+
+<p class="frase">
+
+Cada mejora representa un paso más
+en nuestra historia.
+
+</p>
+
+</div>
+
+</div>
+
+
+<!-- 2026 -->
+
+<div class="evento">
+
+<span class="punto"></span>
+
+<div class="evento-contenido">
+
+<span class="año">
+2026
+</span>
+
+<h3>
+🎉 ¡Cumplimos 10 años!
+</h3>
+
+<p>
+
+Hoy celebramos el décimo aniversario
+del Telebachillerato Comunitario #239
+El Calvario.
+
+Diez años de clases, generaciones,
+maestros, estudiantes, actividades,
+aprendizajes y momentos.
+
+</p>
+
+<img
+src="IMAGENTBC/tbc%20239%20actualmente.jfif"
+alt="TBC 239 actualmente"
+>
+
+<p class="frase">
+
+10 años después,
+seguimos creciendo y escribiendo
+nuevos capítulos.
+
+</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     EVOLUCIÓN
+========================= -->
+
+<section id="evolucion">
+
+<div class="titulo">
+
+<small>Una década de cambios</small>
+
+<h2>
+De nuestros comienzos a nuestra actualidad
+</h2>
+
+<p>
+Una mirada a la evolución de nuestra institución.
+</p>
+
+</div>
+
+
+<div class="contenedor">
+
+
+<div class="tarjeta">
+
+<h3>
+🌱 Nuestros comienzos
+</h3>
+
+<img
+src="IMAGENTBC/nuestros%20comienzos.jfif"
+alt="Nuestros comienzos"
+>
+
+<p style="margin-top:15px;">
+
+Espacios prestados,
+recursos sencillos y muchas ganas de estudiar.
+
+</p>
+
+</div>
+
+
+<div class="tarjeta morada">
+
+<h3>
+💚 Nuestra actualidad
+</h3>
+
+<img
+src="IMAGENTBC/nuestra%20actualidad%20tbc.jfif"
+alt="Nuestra actualidad"
+>
+
+<p style="margin-top:15px;">
+
+Una comunidad que continúa creciendo
+y construyendo su futuro.
+
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     GALERÍA
+========================= -->
+
+<section id="galeria">
+
+<div class="titulo">
+
+<small>
+Actividades del TBC #239
+</small>
+
+<h2>
+Momentos que forman nuestra historia
+</h2>
+
+<p>
+
+Una colección de recuerdos de nuestra comunidad.
+
+Haz clic en cualquier fotografía
+para verla en grande.
+
+</p>
+
+</div>
+
+
+<div class="galeria">
+
+
+<figure>
+<img src="IMAGENTBC/galeria%201.jfif">
+</figure>
+
+<figure>
+<img src="IMAGENTBC/galeria%202.jfif">
+</figure>
+
+<figure>
+<img src="IMAGENTBC/galeria%203.jfif">
+</figure>
+
+<figure>
+<img src="IMAGENTBC/galeria%205.jfif">
+</figure>
+
+<figure>
+<img src="IMAGENTBC/galeria%206.jfif">
+</figure>
+
+<figure>
+<img src="IMAGENTBC/galeria%207.jfif">
+</figure>
+
+<figure>
+<img src="IMAGENTBC/galeria%208.jfif">
+</figure>
+
+<figure>
+<img src="IMAGENTBC/galeria%209.jfif">
+</figure>
+
+<figure>
+<img src="IMAGENTBC/galeria%2010.jfif">
+</figure>
+
+<figure>
+<img src="IMAGENTBC/galeria%2011.jfif">
+</figure>
+
+<figure>
+<img src="IMAGENTBC/galeria%2012.jfif">
+</figure>
+
+<figure>
+<img src="IMAGENTBC/galeria%2013.jfif">
+</figure>
+
+<figure>
+<img src="IMAGENTBC/galeria%2014.jfif">
+</figure>
+
+<figure>
+<img src="IMAGENTBC/galeria%2015.jfif">
+</figure>
+
+<figure>
+<img src="IMAGENTBC/galeria%2016.jfif">
+</figure>
+
+<figure>
+<img src="IMAGENTBC/galeria%2017.jfif">
+</figure>
+
+<figure>
+<img src="IMAGENTBC/galeria%2018.jfif">
+</figure>
+
+<figure>
+<img src="IMAGENTBC/galeria%2019.jfif">
+</figure>
+
+<figure>
+<img src="IMAGENTBC/galeria%2020.jfif">
+</figure>
+
+<figure>
+<img src="IMAGENTBC/galeria%2021.jfif">
+</figure>
+
+<figure>
+<img src="IMAGENTBC/galeria%2022.jfif">
+</figure>
+
+<figure>
+<img src="IMAGENTBC/galeria%2023.jfif">
+</figure>
+
+<figure>
+<img src="IMAGENTBC/galeria%2024.jfif">
+</figure>
+
+<figure>
+<img src="IMAGENTBC/galeria%2025.jfif">
+</figure>
+
+<figure>
+<img src="IMAGENTBC/galeria%2026.jfif">
+</figure>
+
+<figure>
+<img src="IMAGENTBC/galeria%2027.jfif">
+</figure>
+
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     FRASE
+========================= -->
+
+<section class="frase-final">
+
+<div>
+
+<p>
+
+“Cada fotografía guarda un momento,
+cada momento forma parte de nuestra historia.”
+
+</p>
+
+<br>
+
+<strong>
+
+— TBC #239 El Calvario · 10.º aniversario
+
+</strong>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     CIERRE
+========================= -->
+
+<section class="final" id="contacto">
+
+<div class="final10">
+10
+</div>
+
+<h2>
+¡TBC #239 El Calvario está de aniversario!
+</h2>
+
+<p>
+
+2016 — 2026 · Diez años de historia,
+aprendizaje, esfuerzo y crecimiento.
+
+</p>
+
+
+<div class="contacto">
+
+<p>
+Para más información, comunícate con:
+</p>
+
+<strong>
+Ing. Germán Barrera Trujillo
+</strong>
+
+<p>
+📞
+<a href="tel:7361084866">
+736 108 4866
+</a>
+</p>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     PIE DE PÁGINA
+========================= -->
+
+<footer>
+
+<div>
+
+<img src="IMAGENTBC/logo.jfif">
+
+<br>
+
+<strong>
+Telebachillerato Comunitario #239
+</strong>
+
+<br>
+
+El Calvario, Guerrero
+
+</div>
+
+
+<div>
+
+<strong>
+🎉 10.º ANIVERSARIO · 2016 — 2026
+</strong>
+
+</div>
+
+
+<div>
+
+Educación · Comunidad · Futuro
+
+</div>
+
+</footer>
+
+
+<!-- =========================
+     VENTANA DE IMAGEN GRANDE
+========================= -->
+
+<div class="lightbox" id="lightbox">
+
+<button class="cerrar" id="cerrar">
+×
+</button>
+
+<img id="imagenGrande">
+
+</div>
+
+
+<script>
+
+/* =========================
+   AMPLIAR IMÁGENES
+========================= */
+
+const lightbox =
+document.getElementById("lightbox");
+
+const imagenGrande =
+document.getElementById("imagenGrande");
+
+const cerrar =
+document.getElementById("cerrar");
+
+
+const todasLasImagenes =
+document.querySelectorAll(
+".galeria img, .evento img, .tarjeta img"
+);
+
+
+todasLasImagenes.forEach(function(imagen){
+
+    imagen.addEventListener("click",function(){
+
+        imagenGrande.src =
+        imagen.src;
+
+        lightbox.classList.add("activo");
+
+    });
+
+});
+
+
+cerrar.addEventListener("click",function(){
+
+    lightbox.classList.remove("activo");
+
+});
+
+
+lightbox.addEventListener("click",function(event){
+
+    if(event.target === lightbox){
+
+        lightbox.classList.remove("activo");
+
+    }
+
+});
+
+
+document.addEventListener("keydown",function(event){
+
+    if(event.key === "Escape"){
+
+        lightbox.classList.remove("activo");
+
+    }
+
+});
+
+</script>
+
+
+</body>
+</html>
